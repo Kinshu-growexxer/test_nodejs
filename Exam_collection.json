@@ -1,0 +1,628 @@
+{
+	"info": {
+		"_postman_id": "f5af8eb9-691d-463f-accb-ffe833550b8e",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42806449"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Shirts",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Cloths",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Clothings",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/home/growlt312/Downloads/shirt.jpg"
+						},
+						{
+							"key": "stock",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/products",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\":\"1700\",\n    \"description\":\"Zara brand\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/products/67d013d089e1dc0f9a7e2f2c",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"67d013d089e1dc0f9a7e2f2c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update aproduct",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\":\"1700\",\n    \"description\":\"Zara brand\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/products/67d013d089e1dc0f9a7e2f2c",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"67d013d089e1dc0f9a7e2f2c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all product with pagination and sort and limit",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/products?category=Cloths&page=1&limit=10&sort=asc",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Cloths"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzNDBmNjc5MzZhOTFjMzBjZWMxNyIsImlhdCI6MTc0MTY5ODA2NCwiZXhwIjoxNzQ0MjkwMDY0fQ.h0cXcihBhZ0e0LD9sx6gNLjAqJSi_T7vUQEm7ecWTbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\":\"Johv Doe\",\n    \"customerEmail\":\"johy@example.com\",\n    \"products\":[{\n        \"productId\":\"67d02430a25b7df1be62aa6f\",\n        \"quantity\":2\n    }]\n}\n        \n\n            \n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register a user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Johv Doe\",\n  \"email\": \"johy@example.com\",\n  \"password\": \"password12545\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post an order",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzNDBmNjc5MzZhOTFjMzBjZWMxNyIsImlhdCI6MTc0MTY5ODA2NCwiZXhwIjoxNzQ0MjkwMDY0fQ.h0cXcihBhZ0e0LD9sx6gNLjAqJSi_T7vUQEm7ecWTbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\":\"Johv Doe\",\n    \"customerEmail\":\"johy@example.com\",\n    \"products\":[{\n        \"productId\":\"67d02430a25b7df1be62aa6f\",\n        \"quantity\":2\n    }]\n}\n        \n\n            \n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an order status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzNDBmNjc5MzZhOTFjMzBjZWMxNyIsImlhdCI6MTc0MTY5ODA2NCwiZXhwIjoxNzQ0MjkwMDY0fQ.h0cXcihBhZ0e0LD9sx6gNLjAqJSi_T7vUQEm7ecWTbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"Shipped\"\n}\n        \n\n            \n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders/67d03879f6f6416ec92a4935",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"67d03879f6f6416ec92a4935"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get orders id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzYTM2ZjZmNjQxNmVjOTJhNDkzZiIsImlhdCI6MTc0MTY5OTY5MywiZXhwIjoxNzQ0MjkxNjkzfQ.-z8O18wqH9cNs9BKI5QEscuAXrbzYr67-9CfpGRrT84",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders/67d0340f67936a91c30cec17",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"67d0340f67936a91c30cec17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login  a user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzNDBmNjc5MzZhOTFjMzBjZWMxNyIsImlhdCI6MTc0MTY5ODA2NCwiZXhwIjoxNzQ0MjkwMDY0fQ.h0cXcihBhZ0e0LD9sx6gNLjAqJSi_T7vUQEm7ecWTbs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzYTM2ZjZmNjQxNmVjOTJhNDkzZiIsImlhdCI6MTc0MTY5OTYzOCwiZXhwIjoxNzQ0MjkxNjM4fQ.a6zaoVQMyZIGGNL5iwx2AtzZ54x7mz2KgiSFlqFxVbM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"johky@example.com\",\n  \"password\": \"password125456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post order2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post order2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\":\"Johvyyyy Doe\",\n    \"customerEmail\":\"johky@example.com\",\n    \"products\":[{\n        \"productId\":\"67d02430a25b7df1be62aa6f\",\n        \"quantity\":2\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get orders id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDAzYTM2ZjZmNjQxNmVjOTJhNDkzZiIsImlhdCI6MTc0MTY5OTY5MywiZXhwIjoxNzQ0MjkxNjkzfQ.-z8O18wqH9cNs9BKI5QEscuAXrbzYr67-9CfpGRrT84",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders/67d03b86f6f6416ec92a4947",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders",
+						"67d03b86f6f6416ec92a4947"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get conditional",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/api/orders?status=Shippend&?page=1&?limit=10",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Shippend"
+						},
+						{
+							"key": "?page",
+							"value": "1"
+						},
+						{
+							"key": "?limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
